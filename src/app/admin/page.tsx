@@ -170,7 +170,8 @@ export default function AdminPage() {
     permissions: Permissions;
     permKey: keyof Permissions;
     label: string;
-    icon: React.ElementType;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+icon: any;
   }) => {
     const isOn = permissions[permKey];
     const isLoading = saving === memberId + permKey;
