@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-syne: "Syne", sans-serif;
+  --font-dm-mono: "DM Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #17171a;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a30;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a42;
+}
+
+/* Task card drag ghost */
+.task-card-dragging {
+  opacity: 0.4;
+}
+
+/* Column drop zone active */
+.column-drop-active {
+  border-color: #f59e0b !important;
+}
