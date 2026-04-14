@@ -170,7 +170,7 @@ export default function AdminPage() {
     permissions: Permissions;
     permKey: keyof Permissions;
     label: string;
-    icon: React.ComponentType<{ size?: number }>;
+    icon: React.ElementType;
   }) => {
     const isOn = permissions[permKey];
     const isLoading = saving === memberId + permKey;
