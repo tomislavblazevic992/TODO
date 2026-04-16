@@ -89,7 +89,14 @@ export default function DashboardPage() {
     );
   }
 
-  if (!profile) return null;
+  // ✅ Ako user postoji ali profile još nije učitan, čekaj — ne prikazuj praznu stranicu
+  if (!profile) {
+    return (
+      <div className="min-h-screen bg-bg flex items-center justify-center">
+        <div className="w-6 h-6 border-2 border-border border-t-amber-500 rounded-full animate-spin" />
+      </div>
+    );
+  }
 
   const hasNoPermissions =
     !isAdmin &&
